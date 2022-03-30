@@ -17,8 +17,7 @@ function App() {
   return ( 
     
   <div>
-    <Header />
-    <Main projectsArr ={projectsArr} />
+    <Main />
     <Footer />
   </div>
   );
