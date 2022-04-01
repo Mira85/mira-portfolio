@@ -9,6 +9,7 @@ import About from "./About";
 import Home from "./Home";
 import projectsArr from "../data";
 import emailjs from '@emailjs/browser';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 
@@ -83,7 +84,7 @@ export function Main(props) {
                         </div>
                     </div>
                     <div className="buttonsArea">
-                        <Button onClick={() => handleShow('about')}>About me</Button>
+                        <Button onClick={() => handleShow('about')}>About</Button>
                         <Button onClick={() => handleShow('experience')}>Experience</Button>
                         <Button onClick={() => handleShow('resume')}>Resume</Button>
                         <Button onClick={() => handleShow('contact')}>Contact</Button>
@@ -150,11 +151,11 @@ export function Main(props) {
                                             <div>Description: {object.description}</div>
                                             <div>Technologies: {object.technologies}</div>
                                             <Button variant="secondary">
-                                                <a href={object.github}>Check Code</a>
+                                                <a href={object.github} target="_blank">Check Code</a>
 
                                             </Button>
                                             <Button variant="secondary">
-                                                <a href={object.viewProject}>View Project</a>
+                                                <a href={object.viewProject} target="_blank">View Project</a>
 
                                             </Button>
                                         </Card.Text>
@@ -212,7 +213,14 @@ export function Main(props) {
                         <Button variant="primary" type="submit">
                             Submit
                         </Button>
+                       
                     </Form>
+                    
+                                               
+
+                                            
+                    <a href="https://github.com/Mira85" target="_blank"><i class="bi bi-github"> </i></a>
+                   <a href="https://www.linkedin.com/in/mira-makadia/" target="_blank">  <i class="bi bi-linkedin"></i></a>
                 </Modal.Body>
 
             </Modal>
