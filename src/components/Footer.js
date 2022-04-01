@@ -1,5 +1,9 @@
+import "./Footer.css"
+
 function Footer (props) {
-    return <h1> Footer</h1>
+    return <footer className="footer">
+        Created By Mira Makadia
+    </footer>
 }
 
 export default Footer;

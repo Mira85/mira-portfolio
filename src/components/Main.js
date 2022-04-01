@@ -1,23 +1,37 @@
 import "./Main.css"
-import React from 'react';
+import React, { useRef } from 'react';
 import { Route, Switch, Redirect } from "react-router-dom"
-import { Button, Modal } from "react-bootstrap";
+import { Button, Modal, Form, Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import About from "./About";
 import Home from "./Home";
 import projectsArr from "../data";
+import emailjs from '@emailjs/browser';
 
 
 
+/* export const ContactUs = () => {
+    const form = useRef();
+  
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('gmail', 'template_95fcx2y', form.current, 'lSR6CQp9OHmqtdgo8')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        e.target.reset()
+    };
+
+    return sendEmail;
+} */
 
 
-
-
-
-
-function Main(props) {
+export function Main(props) {
 
     const [show, setShow] = useState({
         about: false,
@@ -39,7 +53,19 @@ function Main(props) {
         }
     }
 
+    const form = useRef();
 
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_xsz4gbp', 'template_95fcx2y', form.current, 'lSR6CQp9OHmqtdgo8')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset()
+    };
 
 
     return (
@@ -71,19 +97,37 @@ function Main(props) {
 
                 </div>
             </div>
-            <Modal dialogClassName='my-modal' show={show.about} onHide={handleClose}>
+            <Modal show={show.about} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>About me</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Save Changes
-                    </Button>
-                </Modal.Footer>
+                <Modal.Body>
+                    
+                    <Card style={{ maxWidth: "50rem" }}>
+                        <Row className='no-gutters'>
+                            <Col md={5} lg={5}>
+                        <Card.Img variant="top" src="images/profilepic.png" style={{
+                            height: "100%",
+                            width: "100%",
+                        }} className="image" />
+                        </Col>
+                        <Col>
+                        <Card.Body>
+                            <Card.Title className="cardTitle"></Card.Title>
+                            <Card.Text>
+                                <p>Hi, my name is Mira. I am a full stack software engineer with a background in the Pharmaceutical Industry. I recently graduated from the Software Engineering Immersive Flex program at General Assembly, where I developed skills in Javascript, React, Python, Django and many other technical skills. During the course I built four projects over the course of 6 months. </p>
+                            <hr/>
+                            <h5>My skills</h5>
+
+                            </Card.Text>
+                        </Card.Body>
+                        </Col>
+                        </Row>
+                    </Card>
+
+                </Modal.Body>
+
+
             </Modal>
 
             <Modal show={show.experience} onHide={handleClose}>
@@ -91,11 +135,11 @@ function Main(props) {
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    
-                            <div className="projectArea">
-                            {projectsArr.map((object, arrayIdx) => {
-                        return (
-                                <Card key={arrayIdx} style={{ width: "20rem" }}>
+
+                    <div className="projectArea">
+                        {projectsArr.map((object, arrayIdx) => {
+                            return (
+                                <Card key={arrayIdx} style={{ width: "20rem" }} >
                                     <Card.Img variant="top" src={object.image} style={{
                                         height: "15.5rem",
                                         width: "20rem",
@@ -105,20 +149,22 @@ function Main(props) {
                                         <Card.Text>
                                             <div>Description: {object.description}</div>
                                             <div>Technologies: {object.technologies}</div>
-                                            <Button variant="secondary" onClick={handleClose}>
-                                                Close
+                                            <Button variant="secondary">
+                                                <a href={object.github}>Check Code</a>
+
                                             </Button>
-                                            <Button variant="primary" onClick={handleClose}>
-                                                Save Changes
+                                            <Button variant="secondary">
+                                                <a href={object.viewProject}>View Project</a>
+
                                             </Button>
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
-                           
-                        );
 
-                    })};
-                     </div>
+                            );
+
+                        })};
+                    </div>
                 </Modal.Body>
 
 
@@ -144,15 +190,31 @@ function Main(props) {
                 <Modal.Header closeButton>
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>contact</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Save Changes
-                    </Button>
-                </Modal.Footer>
+                <Modal.Body>
+                    <Form ref={form} onSubmit={sendEmail}>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Full Name</Form.Label>
+                            <Form.Control type="text" name="name" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control type="email" name="email" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Subject</Form.Label>
+                            <Form.Control type="text" name="subject" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Message</Form.Label>
+                            <Form.Control as="textarea" rows={5} name="message" />
+                        </Form.Group>
+
+                        <Button variant="primary" type="submit">
+                            Submit
+                        </Button>
+                    </Form>
+                </Modal.Body>
+
             </Modal>
 
         </div>
