@@ -9,7 +9,7 @@ import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import "./styles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import projectsArr from "./data";
+
 import { useState, useEffect } from "react";
 
 function App() {
