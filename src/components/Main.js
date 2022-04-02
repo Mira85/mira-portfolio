@@ -10,6 +10,8 @@ import Home from "./Home";
 import projectsArr from "../data";
 import emailjs from '@emailjs/browser';
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { Document, pdfjs, Page } from "react-pdf";
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 
 
@@ -69,6 +71,14 @@ export function Main(props) {
     };
 
 
+    const [numPages, setNumPages] = useState(null);
+    const [pageNumber, setPageNumber] = useState(1);
+
+    function onDocumentLoadSuccess({ numPages }) {
+        setNumPages(numPages);
+        setPageNumber(1);
+    }
+
     return (
 
         <div className="intro"  /*style={{ backgroundImage: "url(/images/background-print.png)" }}*/ >
@@ -96,9 +106,9 @@ export function Main(props) {
                         </div>
                         <div className="bottomButtons" >
                             <Button className="button" style={{ height: "150px", width: "150px" }} onClick={() => handleShow('resume')}>Resume</Button>
-                            
-                                <Button className="button" style={{ height: "150px", width: "150px" }} onClick={() => handleShow('contact')}>Contact</Button>
-                            
+
+                            <Button className="button" style={{ height: "150px", width: "150px" }} onClick={() => handleShow('contact')}>Contact</Button>
+
                         </div>
                     </div>
 
@@ -109,29 +119,30 @@ export function Main(props) {
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                    <div className="aboutWrapper">
 
-                    <Card style={{ maxWidth: "50rem" }}>
-                        <Row className='no-gutters'>
-                            <Col md={5} lg={5}>
-                                <Card.Img variant="top" src="images/profilepic.png" style={{
-                                    height: "100%",
-                                    width: "100%",
-                                }} className="image" />
-                            </Col>
-                            <Col>
-                                <Card.Body>
-                                    <Card.Title className="cardTitle"></Card.Title>
-                                    <Card.Text>
-                                        <p>Hi, my name is Mira. I am a full stack software engineer with a background in the Pharmaceutical Industry. I recently graduated from the Software Engineering Immersive Flex program at General Assembly, where I developed skills in Javascript, React, Python, Django and many other technical skills. During the course I built four projects over the course of 6 months. </p>
-                                        <hr />
-                                        <h5>My skills</h5>
+                        <Card style={{ maxWidth: "50rem" }}>
+                            <Row className='no-gutters'>
+                                <Col md={5} lg={5}>
+                                    <Card.Img variant="top" src="images/profilepic.png" style={{
+                                        height: "100%",
+                                        width: "100%",
+                                    }} className="image" />
+                                </Col>
+                                <Col>
+                                    <Card.Body>
+                                        <Card.Title className="cardTitle"></Card.Title>
+                                        <Card.Text>
+                                            <p>Hi, my name is Mira. I am a full stack software engineer with a background in the Pharmaceutical Industry. I recently graduated from the Software Engineering Immersive Flex program at General Assembly, where I developed skills in Javascript, React, Python, Django and many other technical skills. During the course I built four projects over the course of 6 months. </p>
+                                            <hr />
+                                            <h5>My skills</h5>
 
-                                    </Card.Text>
-                                </Card.Body>
-                            </Col>
-                        </Row>
-                    </Card>
-
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Col>
+                            </Row>
+                        </Card>
+                    </div>
                 </Modal.Body>
 
 
@@ -181,15 +192,12 @@ export function Main(props) {
                 <Modal.Header closeButton>
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>resume</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Save Changes
-                    </Button>
-                </Modal.Footer>
+                <Modal.Body>
+                    <Document file={"resume.pdf"} onLoadError={console.error} onLoadSuccess={onDocumentLoadSuccess}>
+                        <Page pageNumber={pageNumber} />
+                        </Document>
+                </Modal.Body>
+
             </Modal>
 
 
