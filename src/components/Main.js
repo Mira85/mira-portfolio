@@ -117,13 +117,13 @@ export function Main(props) {
                 </div>
                 <Modal ClassName="your-custom-class" show={show.about} onHide={handleClose}>
 
-                    <Modal.Header className="modalHeader " closeButton closeVariant="white">
-                        <Modal.Title>About Me</Modal.Title>
+                    <Modal.Header className="modalHeader " closeButton closeVariant="white" >
+                        <Modal.Title className="modalTitle">About Me</Modal.Title>
                     </Modal.Header>
                     <Modal.Body className="modalBody">
                         <div className="aboutWrapper">
 
-                            <Card style={{ maxWidth: "90rem", maxHeight: "90rem" }}>
+                            <Card className="card" style={{ maxWidth: "90rem", maxHeight: "90rem" }}>
                                 <Row className='no-gutters'>
                                     <Col md={5} lg={5}>
                                         <Card.Img variant="top" src="images/profilepic.png" style={{
@@ -138,24 +138,24 @@ export function Main(props) {
                                                 <p>Hi, my name is Mira. I am a full stack software engineer with a background in the Pharmaceutical Industry. I recently graduated from the Software Engineering Immersive Flex program at General Assembly, where I developed skills in Javascript, React, Python, Django and many other technical skills. During the course I built four projects over the course of 6 months. </p>
                                                 <hr />
                                                 <h5>My skills:</h5>
-                                                <p>
-                                                    <button>HTML</button>
-                                                    <button>CSS</button>
-                                                    <button>JAVASCRIPT</button>
-                                                    <button>JQUERY</button>
-                                                    <button>PYTHON</button>
-                                                    <button>DJANGO</button>
-                                                    <button>REACT</button>
-                                                    <button>NODE.JS</button>
-                                                    <button>EXPRESS</button>
-                                                    <button>MONGODB</button>
-                                                    <button>POSTGRES</button>
-                                                    <button>BOOTSTRAP</button>
-                                                    <button>MATERIALIZE</button>
-                                                    <button>NETLIFY</button>
-                                                    <button>HEROKU</button>
+                                                <div className="skills">
+                                                    <button className="skills">HTML5</button>
+                                                    <button className="skills">CSS</button>
+                                                    <button className="skills">JavaScript</button>
+                                                    <button className="skills">JQuery</button>
+                                                    <button className="skills">Python</button>
+                                                    <button className="skills">Django</button>
+                                                    <button className="skills">React</button>
+                                                    <button className="skills">Node.js</button>
+                                                    <button className="skills">Express</button>
+                                                    <button className="skills">Mongodb</button>
+                                                    <button className="skills">PostgreSQL</button>
+                                                    <button className="skills">Bootstrap</button>
+                                                    <button className="skills">Materialize</button>
+                                                    <button className="skills">Netlify</button>
+                                                    <button className="skills">Heroku</button>
 
-                                                </p>
+                                                </div>
 
 
                                             </Card.Text>
@@ -171,7 +171,7 @@ export function Main(props) {
 
                 <Modal show={show.experience} onHide={handleClose}>
                     <Modal.Header className="modalHeader " closeButton closeVariant="white">
-                        <Modal.Title>Modal heading</Modal.Title>
+                        <Modal.Title className="modalTitle">Experience</Modal.Title>
                     </Modal.Header>
                     <Modal.Body className="modalBody">
 
@@ -188,14 +188,16 @@ export function Main(props) {
                                             <Card.Text>
                                                 <div>Description: {object.description}</div>
                                                 <div>Technologies: {object.technologies}</div>
-                                                <Button variant="secondary">
-                                                    <a href={object.github} target="_blank">Check Code</a>
+                                                <div className="projectBtnWrapper">
+                                                    <Button className="projectBtns" variant="secondary">
+                                                        <a className="projectAnchor" href={object.github} target="_blank">Check Code</a>
 
-                                                </Button>
-                                                <Button variant="secondary">
-                                                    <a href={object.viewProject} target="_blank">View Project</a>
+                                                    </Button>
+                                                    <Button className="projectBtns" variant="secondary">
+                                                        <a className="projectAnchor" href={object.viewProject} target="_blank">View Project</a>
 
-                                                </Button>
+                                                    </Button>
+                                                </div>
                                             </Card.Text>
                                         </Card.Body>
                                     </Card>
@@ -211,7 +213,7 @@ export function Main(props) {
 
                 <Modal show={show.resume} onHide={handleClose}>
                     <Modal.Header className="modalHeader " closeButton closeVariant="white">
-                        <Modal.Title>Modal heading</Modal.Title>
+                        <Modal.Title className="modalTitle">Resume</Modal.Title>
                     </Modal.Header>
                     <Modal.Body className="modalBody">
                         <Document className="resume" file={"resume.pdf"} onLoadError={console.error} onLoadSuccess={onDocumentLoadSuccess}>
@@ -224,7 +226,7 @@ export function Main(props) {
 
                 <Modal show={show.contact} onHide={handleClose}>
                     <Modal.Header className="modalHeader " closeButton closeVariant="white">
-                        <Modal.Title>Modal heading</Modal.Title>
+                        <Modal.Title className="modalTitle">Contact Me</Modal.Title>
                     </Modal.Header>
                     <Modal.Body className="modalBody contactBody">
                         <Form ref={form} onSubmit={sendEmail} className="contactForm">
