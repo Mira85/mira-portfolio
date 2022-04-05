@@ -50,7 +50,7 @@ export function Main(props) {
     
     const [pageNumber, setPageNumber] = useState(1);
 
-    function onDocumentLoadSuccess({ }) {
+    function onDocumentLoadSuccess() {
         setPageNumber(1);
     }
 
@@ -160,11 +160,11 @@ export function Main(props) {
                                                 </div>
                                                 <div className="projectBtnWrapper">
                                                     <Button className="projectBtns" variant="secondary">
-                                                        <a className="projectAnchor" href={object.github} target="_blank">Check Code</a>
+                                                        <a className="projectAnchor" href={object.github} target="_blank" rel="noreferrer nofollow">Check Code</a>
 
                                                     </Button>
                                                     <Button className="projectBtns" variant="secondary">
-                                                        <a className="projectAnchor" href={object.viewProject} target="_blank">View Project</a>
+                                                        <a className="projectAnchor" href={object.viewProject} target="_blank" rel="noreferrer nofollow">View Project</a>
                                                     </Button>
                                                 </div>
                                             </Card.Text>
@@ -217,8 +217,8 @@ export function Main(props) {
                             </Button>
                         </div>
                         <div className="contactBtns">
-                            <a href="https://github.com/Mira85" target="_blank"><i className="bi bi-github" style={{ fontSize: '25px', color: '#E0AAFF' }}> </i></a>
-                            <a href="https://www.linkedin.com/in/mira-makadia/" target="_blank">  <i className="bi bi-linkedin" style={{ fontSize: '25px', color: '#E0AAFF' }}></i></a>
+                            <a href="https://github.com/Mira85" target="_blank" rel="noreferrer nofollow"><i className="bi bi-github" style={{ fontSize: '25px', color: '#E0AAFF' }}> </i></a>
+                            <a href="https://www.linkedin.com/in/mira-makadia/" target="_blank" rel="noreferrer nofollow">  <i className="bi bi-linkedin" style={{ fontSize: '25px', color: '#E0AAFF' }}></i></a>
                         </div>
                     </Modal.Body>
                 </Modal>

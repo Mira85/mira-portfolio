@@ -1,4 +1,4 @@
-export default [
+const projectsArr =  [
     
     {
         image:'images/vroomride-portfolio.png',
@@ -26,3 +26,5 @@ export default [
     }
     
 ]
+
+export default projectsArr;
