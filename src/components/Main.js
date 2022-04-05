@@ -1,36 +1,13 @@
 import "./Main.css"
 import React, { useRef } from 'react';
-import { Route, Switch, Redirect } from "react-router-dom"
 import { Button, Modal, Form, Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import About from "./About";
 import projectsArr from "../data";
 import emailjs from '@emailjs/browser';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Document, pdfjs, Page } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
-
-
-/* export const ContactUs = () => {
-    const form = useRef();
-  
-    const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs.sendForm('gmail', 'template_95fcx2y', form.current, 'lSR6CQp9OHmqtdgo8')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
-        e.target.reset()
-    };
-
-    return sendEmail;
-} */
 
 
 export function Main(props) {
@@ -106,12 +83,9 @@ export function Main(props) {
                             </div>
                             <div className="bottomButtons" >
                                 <Button className="button" style={{ height: "150px", width: "150px" }} onClick={() => handleShow('resume')}>Resume</Button>
-
                                 <Button className="button" style={{ height: "150px", width: "150px" }} onClick={() => handleShow('contact')}>Contact</Button>
-
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <Modal className="modalArea" show={show.about} onHide={handleClose}>
@@ -121,11 +95,10 @@ export function Main(props) {
                     </Modal.Header>
                     <Modal.Body className="modalBody">
                         <div className="aboutWrapper">
-
                             <Card className="card" style={{ maxWidth: "90rem", maxHeight: "90rem" }}>
                                 <Row className='no-gutters'>
                                     <Col md={5} lg={5}>
-                                        <Card.Img variant="top" src="images/profilepic.png" style={{
+                                        <Card.Img variant="top" src="https://imgur.com/bpixhe9.png" style={{
                                             height: "100%",
                                             width: "100%",
                                         }} className="image" />
@@ -134,7 +107,9 @@ export function Main(props) {
                                         <Card.Body>
                                             <Card.Title className="cardTitle"></Card.Title>
                                             <Card.Text>
-                                                <p>Hi, my name is Mira. I am a full stack software engineer with a background in the Pharmaceutical Industry. I recently graduated from the Software Engineering Immersive Flex program at General Assembly, where I developed skills in Javascript, React, Python, Django and many other technical skills. During the course I built four projects over the course of 6 months. </p>
+                                                <p>Hi, my name is Mira. I am a full stack software engineer with a background in the Pharmaceutical Industry. I recently graduated from the Software Engineering Immersive Flex program at General Assembly, where I developed skills in Javascript, React, Python, Django and many other technical skills. Over the course of 6 months, i built four projects. Details about them can be found in the experience section. </p>
+                                                <p>My previous experience in the Pharmaceutical Industry as a senior formulation scientist has taught me to analyze and solve complex problems and bring value to the teams I work with. I am looking forward to my journey in tech industry where i can solve problems creatively using my inquisitive nature.
+                                                </p>
                                                 <hr />
                                                 <h5>My skills:</h5>
                                                 <div className="skills">
@@ -153,10 +128,7 @@ export function Main(props) {
                                                     <button className="skills">Materialize</button>
                                                     <button className="skills">Netlify</button>
                                                     <button className="skills">Heroku</button>
-
                                                 </div>
-
-
                                             </Card.Text>
                                         </Card.Body>
                                     </Col>
@@ -164,8 +136,6 @@ export function Main(props) {
                             </Card>
                         </div>
                     </Modal.Body>
-
-
                 </Modal>
 
                 <Modal className="modalArea" show={show.experience} onHide={handleClose}>
@@ -173,7 +143,6 @@ export function Main(props) {
                         <Modal.Title className="modalTitle">Experience</Modal.Title>
                     </Modal.Header>
                     <Modal.Body className="modalBody">
-
                         <div className="projectArea">
                             {projectsArr.map((object, arrayIdx) => {
                                 return (
@@ -183,14 +152,14 @@ export function Main(props) {
                                             width: "25rem",
                                         }} className="image" />
                                         <Card.Body>
-                                            <Card.Title className="cardTitle" style={{ color: '#E0AAFF', textAlign:'center',fontSize: '24px' }}>{object.name}
+                                            <Card.Title className="cardTitle" style={{ color: '#E0AAFF', textAlign: 'center', fontSize: '24px' }}>{object.name}
                                             </Card.Title>
                                             <Card.Text>
-                                                <div><b><span style={{ fontSize: '18px'}}>Description:</span></b> {object.description}</div>
-                                                <div><b><span style={{ fontSize: '18px'}}>Technologies: </span></b>
-                                                
+                                                <div><b><span style={{ fontSize: '18px' }}>Description:</span></b> {object.description}</div>
+                                                <div><b><span style={{ fontSize: '18px' }}>Technologies: </span></b>
+
                                                     {object.technologies.join(', ')}
-                                                        </div>
+                                                </div>
                                                 <div className="projectBtnWrapper">
                                                     <Button className="projectBtns" variant="secondary">
                                                         <a className="projectAnchor" href={object.github} target="_blank">Check Code</a>
@@ -198,20 +167,15 @@ export function Main(props) {
                                                     </Button>
                                                     <Button className="projectBtns" variant="secondary">
                                                         <a className="projectAnchor" href={object.viewProject} target="_blank">View Project</a>
-
                                                     </Button>
                                                 </div>
                                             </Card.Text>
                                         </Card.Body>
                                     </Card>
-
-                                );
-
+                                )
                             })};
                         </div>
                     </Modal.Body>
-
-
                 </Modal>
 
                 <Modal show={show.resume} onHide={handleClose}>
@@ -223,7 +187,6 @@ export function Main(props) {
                             <Page pageNumber={pageNumber} />
                         </Document>
                     </Modal.Body>
-
                 </Modal>
 
 
@@ -249,22 +212,17 @@ export function Main(props) {
                                 <Form.Label className="formLabel">Message</Form.Label>
                                 <Form.Control className="formInput" as="textarea" rows={5} name="message" />
                             </Form.Group>
-                            
                         </Form>
                         <div className="submitBtnWrapper">
-                                <Button className="submitBtnForm" variant="primary" type="submit">
-                                    Send Message
-                                </Button>
-                            </div>
-
-
-
+                            <Button className="submitBtnForm" variant="primary" type="submit">
+                                Send Message
+                            </Button>
+                        </div>
                         <div className="contactBtns">
                             <a href="https://github.com/Mira85" target="_blank"><i class="bi bi-github" style={{ fontSize: '25px', color: '#E0AAFF' }}> </i></a>
                             <a href="https://www.linkedin.com/in/mira-makadia/" target="_blank">  <i class="bi bi-linkedin" style={{ fontSize: '25px', color: '#E0AAFF' }}></i></a>
                         </div>
                     </Modal.Body>
-
                 </Modal>
             </div>
         </div>

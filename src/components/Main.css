@@ -3,35 +3,29 @@
     display: flex;
     height: 100vh;
     width: 100vw;
-    /* clip-path: polygon(71% 0, 100% 0%, 100% 100%, 70% 100%, 53% 49%);  */
-   justify-content: center;
-   align-items: center;
-   background-position: center;
-   background-size: cover;
-    background-repeat: no-repeat;
-    
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;  
 }
+
 .introWrapper{
     background-color: black;
     height:60%;
     width:50%;
-    /* box-shadow: red 0px 5px 15px; */
     box-shadow:   #E0AAFF 0px 5px 15px;
     display:flex;
     border: solid #E0AAFF(150, 47, 47, 0.4);
-    
 }
 
  .introR{
     flex:1;
     display: flex;
     align-items: center;
-    justify-content: center;
-  
-   
-    
-    
+    justify-content: center; 
 }
+
 .introL{
     flex:1;
     display: flex;
@@ -41,16 +35,9 @@
 } 
  .introLBox{
     padding:60px;
-    /* height: 50%; */
-    
-    /* border: solid purple; */
     display: flex;
     flex-direction: column;
     background-color: black;
-    /* justify-content: space-between; */
-    /*box-shadow: 0px 17px 10px -10px rgba(150, 47, 47, 0.4);*/
-    /* box-shadow: 5px 5px 0 rgba(0,0,0,0.25); */
-    /* box-shadow: 10px 5px 5px red;*/
 } 
 
 .introRBox{
@@ -60,8 +47,6 @@
     align-items: center;
     height:30%;
     width:70%;
-    /* box-shadow: 0px 17px 10px -10px rgba(150, 47, 47, 0.4); */
-    /* box-shadow:  rgba(150, 47, 47, 0.4)0px 5px 15px; */
 } 
 
 .introSentence{
@@ -69,16 +54,19 @@
     font-weight: 300;
     color:  #E0AAFF;
 }
+
 .introName{
     font-size: 60px;
     color: #E0AAFF ; 
 }
+
 .titles{
     margin-top: 10px;
     height: 50px; 
     overflow: hidden;
     
 }
+
 .titlesBox{
     height: 100%;
     animation: action 10s ease-in-out infinite alternate;
@@ -90,38 +78,29 @@
     100%{
         transform: translateY(-100px)
     }
-
 }
+
 .item{
     height:50px;
     font-size: 30px;
     font-weight: bold;
-    color: blue;
+    color:silver;
     display: flex;
     align-items:center;
 }
 
-
-
- 
 .introR{
-    
-    /* background-color: #BF953F;
-    background-color: linear-gradient(to right, #BF953F, #FCF6BA,#B38728,#FBF5B7 ); */
     width: 100%;
     height: 100%;
-    /* clip-path: circle(89.4% at 10% 10%);  */
 } 
-
-
 
 .homeBckGround {
     background-size: cover;
     background-repeat: no-repeat;
-   height: 55rem ;
-   width: 91.25rem;
-   background-position: center;
-  margin-top: 3rem;
+    height: 55rem ;
+    width: 91.25rem;
+    background-position: center;
+    margin-top: 3rem;
   
 }
 
@@ -130,38 +109,24 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    row-gap: 30px;
-    
-    
+    row-gap: 30px;  
 }
+
 .topButtons{
     display: flex;
     column-gap: 30px;
-
 }
+
 .bottomButtons{
     display: flex;
     column-gap: 30px;
 
 }
 
- 
 .button{
 
         display: inline-block;
-     /*    background: #3f1651 !important; 
-        background: #E0AAFF !important;
-        
-        background: #C77DFF !important;
-          
-       background: #7B2CBF !important;
-        background: #58189A !important;
-        background: #3C096C !important; */
-       
         background: #9D4EDD !important;
-       
-        
-
         border:none !important;
         color: #fff;
         text-transform: uppercase;
@@ -179,17 +144,15 @@
 }
 
 /* styles for modal*/
-
 .modalTitle{
     color: #E0AAFF !important;
     display:flex !important;
     justify-content: center !important;
     font-size: 30px;
 }
-.modal{
 
+.modal{
     height: 100vh;
-    border: solid red;
     max-width: 100vw;
     display: flex !important;
     justify-content: center !important;
@@ -211,14 +174,9 @@
 .modal-dialog{
     max-width: none !important;
     height: 70% !important; 
-    border: solid green;
-  
     box-shadow:   #E0AAFF 0px 5px 15px;
     width:70vw !important;
-   /* max-width:fit-content;*/
-    /* margin-top: 10rem !important; */
-    background-color: black;
-    background-color: rgba(150, 47, 47, 0.4)
+    background-color: black; 
 }
 
 .modalHeader{
@@ -226,23 +184,20 @@
     text-align: center;
     /* border: solid  #E0AAFF */
 }
+
 .modalBody{
-    
     /* border:solid yellow; */
     max-height:100% !important;  
     background-color:  #121212;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid  royalblue;
     overflow: scroll;
-    
 }
 
 .modal-content{
     height:100% !important;
-    width:100% !important;
-    
+    width:100% !important; 
 }
 
 /*styles for about*/
@@ -253,21 +208,18 @@
     height: 100%;
     width:100%;
 }
-.card{
 
+.card{
     background-color: #1b1f22 !important;
     box-shadow:   #000 0px 5px 15px;
-   
     color:#abb8c3 ;
- /* background-color: rgb(189, 135, 213) !important;  */
-
 }
+
 .skills{
     color:#E0AAFF ;
     background-color: #1b1f22;
     padding-right: 15px;
-    border: none;
-    
+    border: none; 
 }
 
 /* styles for experience */
@@ -276,97 +228,76 @@
     flex-wrap: wrap;
     width: 100%;
     height: 100% ;
-
-    /* width: 95%;
-    height: 70% ; */
-    justify-content: space-evenly;
-    align-content: center;
     row-gap: 6em;
     column-gap: 4rem;
     overflow: scroll;
-    border: solid blue;
-
-   
-  
-
 }
 
 .projectCard{
-
     height: 80% !important;
-    color: solid greenyellow !important;
     overflow: scroll;
+    margin: auto;
 }
+
 .projectBtns {
- 
     border: solid #E0AAFF !important;
-    background-color: #1b1f22 !important;
-   
-    
-    
-   
+    background-color: #1b1f22 !important; 
 }
+
 .projectAnchor{
     text-decoration: none;
     color:#E0AAFF !important; 
 }
+
 .projectBtnWrapper{
     display:flex;
     justify-content: space-evenly;
     margin-top: 1rem;
 }
-.projectTechnologies{
-    border: solid greenyellow;
-}
+
 /* styles for resume*/
 .resume{
-    border: solid red;
     height: 95%; 
 }
 
 /* styles for contact*/
 .contactBody{
-    border: solid blue;
     display:flex;
-    flex-direction: column;
-    
-    
+    flex-direction: column; 
 }
 
 .contactForm{
-    /* border: solid red; */
     height:60%;
     width:50%;
     overflow: scroll;
 }
+
 .contactBtns{
-    
-    /* height:50%; */
     width:20%;
     display: flex;
     justify-content: space-evenly;
     margin-top: 5%;
-
 }
+
 .formLabel{
     color:#E0AAFF
 }
+
 .submitBtnWrapper{
     display: flex;
     justify-content: center !important;
-    
     width: 100%;
 }
+
 .submitBtnForm{
     color:#E0AAFF !important; 
     border: solid #E0AAFF !important;
     background-color: #1b1f22 !important;
     width: 30%
-    
 }
+
 .formInput{
     background-color: 	#383838 !important;
     border: none !important;
     color: white !important;
-    
 }
