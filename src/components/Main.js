@@ -6,7 +6,6 @@ import Card from "react-bootstrap/Card";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import About from "./About";
-import Home from "./Home";
 import projectsArr from "../data";
 import emailjs from '@emailjs/browser';
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -84,7 +83,7 @@ export function Main(props) {
         <div className="intro" style={{ backgroundImage: "url(/images/background-print.png)" }} >
 
             <div className="introWrapper">
-                <div className="introL">left
+                <div className="introL">
                     <div className="introLBox">
                         <h2 className="introSentence">Hey there, My name is </h2>
                         <h1 className="introName">Mira Makadia</h1>
@@ -98,7 +97,7 @@ export function Main(props) {
 
                     </div>
                 </div>
-                <div className="introR">right
+                <div className="introR">
                     <div className="introRBox">
                         <div className="buttonsArea">
                             <div className="topButtons">
@@ -115,7 +114,7 @@ export function Main(props) {
 
                     </div>
                 </div>
-                <Modal ClassName="your-custom-class" show={show.about} onHide={handleClose}>
+                <Modal className="modalArea" show={show.about} onHide={handleClose}>
 
                     <Modal.Header className="modalHeader " closeButton closeVariant="white" >
                         <Modal.Title className="modalTitle">About Me</Modal.Title>
@@ -169,7 +168,7 @@ export function Main(props) {
 
                 </Modal>
 
-                <Modal show={show.experience} onHide={handleClose}>
+                <Modal className="modalArea" show={show.experience} onHide={handleClose}>
                     <Modal.Header className="modalHeader " closeButton closeVariant="white">
                         <Modal.Title className="modalTitle">Experience</Modal.Title>
                     </Modal.Header>
@@ -184,10 +183,14 @@ export function Main(props) {
                                             width: "25rem",
                                         }} className="image" />
                                         <Card.Body>
-                                            <Card.Title className="cardTitle">{object.name}</Card.Title>
+                                            <Card.Title className="cardTitle" style={{ color: '#E0AAFF', textAlign:'center',fontSize: '24px' }}>{object.name}
+                                            </Card.Title>
                                             <Card.Text>
-                                                <div>Description: {object.description}</div>
-                                                <div>Technologies: {object.technologies}</div>
+                                                <div><b><span style={{ fontSize: '18px'}}>Description:</span></b> {object.description}</div>
+                                                <div><b><span style={{ fontSize: '18px'}}>Technologies: </span></b>
+                                                
+                                                    {object.technologies.join(', ')}
+                                                        </div>
                                                 <div className="projectBtnWrapper">
                                                     <Button className="projectBtns" variant="secondary">
                                                         <a className="projectAnchor" href={object.github} target="_blank">Check Code</a>
@@ -231,33 +234,34 @@ export function Main(props) {
                     <Modal.Body className="modalBody contactBody">
                         <Form ref={form} onSubmit={sendEmail} className="contactForm">
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Full Name</Form.Label>
-                                <Form.Control type="text" name="name" />
+                                <Form.Label className="formLabel">Full Name</Form.Label>
+                                <Form.Control className="formInput" type="text" name="name" />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control type="email" name="email" />
+                                <Form.Label className="formLabel">Email</Form.Label>
+                                <Form.Control className="formInput" type="email" name="email" />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label>Subject</Form.Label>
-                                <Form.Control type="text" name="subject" />
+                                <Form.Label className="formLabel">Subject</Form.Label>
+                                <Form.Control className="formInput" type="text" name="subject" />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>Message</Form.Label>
-                                <Form.Control as="textarea" rows={5} name="message" />
+                                <Form.Label className="formLabel">Message</Form.Label>
+                                <Form.Control className="formInput" as="textarea" rows={5} name="message" />
                             </Form.Group>
-
-                            <Button variant="primary" type="submit">
-                                Submit
-                            </Button>
-
+                            
                         </Form>
+                        <div className="submitBtnWrapper">
+                                <Button className="submitBtnForm" variant="primary" type="submit">
+                                    Send Message
+                                </Button>
+                            </div>
 
 
 
                         <div className="contactBtns">
-                            <a href="https://github.com/Mira85" target="_blank"><i class="bi bi-github"> </i></a>
-                            <a href="https://www.linkedin.com/in/mira-makadia/" target="_blank">  <i class="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/Mira85" target="_blank"><i class="bi bi-github" style={{ fontSize: '25px', color: '#E0AAFF' }}> </i></a>
+                            <a href="https://www.linkedin.com/in/mira-makadia/" target="_blank">  <i class="bi bi-linkedin" style={{ fontSize: '25px', color: '#E0AAFF' }}></i></a>
                         </div>
                     </Modal.Body>
 
