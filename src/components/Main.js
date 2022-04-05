@@ -47,11 +47,10 @@ export function Main(props) {
     };
 
 
-    const [numPages, setNumPages] = useState(null);
+    
     const [pageNumber, setPageNumber] = useState(1);
 
-    function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);
+    function onDocumentLoadSuccess({ }) {
         setPageNumber(1);
     }
 
@@ -108,8 +107,7 @@ export function Main(props) {
                                             <Card.Title className="cardTitle"></Card.Title>
                                             <Card.Text>
                                                 <p>Hi, my name is Mira. I am a full stack software engineer with a background in the Pharmaceutical Industry. I recently graduated from the Software Engineering Immersive Flex program at General Assembly, where I developed skills in Javascript, React, Python, Django and many other technical skills. Over the course of 6 months, i built four projects. Details about them can be found in the experience section. </p>
-                                                <p>My previous experience in the Pharmaceutical Industry as a senior formulation scientist has taught me to analyze and solve complex problems and bring value to the teams I work with. I am looking forward to my journey in tech industry where i can solve problems creatively using my inquisitive nature.
-                                                </p>
+                                                <p>My previous experience in the Pharmaceutical Industry as a senior formulation scientist has taught me to analyze and solve complex problems and bring value to the teams I work with. I am looking forward to my journey in tech industry where i can solve problems creatively using my inquisitive nature.</p>
                                                 <hr />
                                                 <h5>My skills:</h5>
                                                 <div className="skills">
@@ -219,8 +217,8 @@ export function Main(props) {
                             </Button>
                         </div>
                         <div className="contactBtns">
-                            <a href="https://github.com/Mira85" target="_blank"><i class="bi bi-github" style={{ fontSize: '25px', color: '#E0AAFF' }}> </i></a>
-                            <a href="https://www.linkedin.com/in/mira-makadia/" target="_blank">  <i class="bi bi-linkedin" style={{ fontSize: '25px', color: '#E0AAFF' }}></i></a>
+                            <a href="https://github.com/Mira85" target="_blank"><i className="bi bi-github" style={{ fontSize: '25px', color: '#E0AAFF' }}> </i></a>
+                            <a href="https://www.linkedin.com/in/mira-makadia/" target="_blank">  <i className="bi bi-linkedin" style={{ fontSize: '25px', color: '#E0AAFF' }}></i></a>
                         </div>
                     </Modal.Body>
                 </Modal>
