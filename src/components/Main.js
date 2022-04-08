@@ -185,7 +185,7 @@ export function Main(props) {
                         <Modal.Title className="modalTitle">Contact Me</Modal.Title>
                     </Modal.Header>
                     <Modal.Body className="modalBody contactBody">
-                        <Form className="contactForm" name="contact-v1" method="post" netlify onSubmit="submit">
+                        <Form className="contactForm" name="contact-v1" method="post" data-netlify="true" onSubmit="submit">
                             <Form.Control className="formInput" type="hidden" name="form-name" value="contactForm" />
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label className="formLabel">Full Name</Form.Label>
