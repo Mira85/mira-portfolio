@@ -185,7 +185,7 @@ export function Main(props) {
                         <Modal.Title className="modalTitle">Contact Me</Modal.Title>
                     </Modal.Header>
                     <Modal.Body className="modalBody contactBody">
-                        <Form className="contactForm" name="contact v1" method="post" data-netlify="true" onSubmit="submit">
+                        <Form className="contactForm" name="contact v1" method="post" onSubmit="submit">
                              <Form.Control className="formInput" type="hidden" name="form-name" value="contact v1" /> 
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label className="formLabel">Full Name</Form.Label>
@@ -203,12 +203,13 @@ export function Main(props) {
                                 <Form.Label className="formLabel">Message</Form.Label>
                                 <Form.Control className="formInput" as="textarea" rows={5} name="message" />
                             </Form.Group>
-                        </Form>
-                        <div className="submitBtnWrapper">
+                            <div className="submitBtnWrapper">
                             <Button className="submitBtnForm" variant="primary" type="submit">
                                 Send Message
                             </Button>
                         </div>
+                        </Form>
+                        
                         <div className="contactBtns">
                             <a href="https://github.com/Mira85" target="_blank" rel="noreferrer nofollow"><i className="bi bi-github" style={{ fontSize: '25px', color: '#E0AAFF' }}> </i></a>
                             <a href="https://www.linkedin.com/in/mira-makadia/" target="_blank" rel="noreferrer nofollow">  <i className="bi bi-linkedin" style={{ fontSize: '25px', color: '#E0AAFF' }}></i></a>
