@@ -1,10 +1,10 @@
 import "./Main.css"
-import React, { useRef } from 'react';
+// import React, { useRef } from 'react';
 import { Button, Modal, Form, Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { useState } from "react";
 import projectsArr from "../data";
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Document, pdfjs, Page } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -31,7 +31,7 @@ export function Main(props) {
             setShow({ ...show, contact: true });
         }
     }
-
+/* 
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -44,7 +44,7 @@ export function Main(props) {
                 console.log(error.text);
             });
         e.target.reset()
-    };
+    }; */
 
 
 
@@ -199,7 +199,8 @@ export function Main(props) {
                         <Modal.Title className="modalTitle">Contact Me</Modal.Title>
                     </Modal.Header>
                     <Modal.Body className="modalBody contactBody">
-                        <Form ref={form} onSubmit={sendEmail} className="contactForm">
+                        <Form className="contactForm" name="contactForm" method="POST" data-netlify="true" onSubmit="submit">
+                            <Form.Control className="formInput" type="hidden" name="form-name" value="contactForm" />
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label className="formLabel">Full Name</Form.Label>
                                 <Form.Control className="formInput" type="text" name="name" />
