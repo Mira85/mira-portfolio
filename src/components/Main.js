@@ -189,15 +189,15 @@ export function Main(props) {
                             {/* <Form.Control className="formInput" type="hidden" name="form-name" value="contactv1" /> */}
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label className="formLabel">Full Name</Form.Label>
-                                <Form.Control className="formInput" type="text" name="name" />
+                                <Form.Control className="formInput" type="text" name="name" required />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label className="formLabel">Email</Form.Label>
-                                <Form.Control className="formInput" type="email" name="email" />
+                                <Form.Control className="formInput" type="email" name="email" required />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label className="formLabel">Subject</Form.Label>
-                                <Form.Control className="formInput" type="text" name="subject" />
+                                <Form.Control className="formInput" type="text" name="subject" required />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                                 <Form.Label className="formLabel">Message</Form.Label>
