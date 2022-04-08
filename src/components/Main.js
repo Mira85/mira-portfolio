@@ -47,7 +47,7 @@ export function Main(props) {
     };
 
 
-    
+
     const [pageNumber, setPageNumber] = useState(1);
 
     function onDocumentLoadSuccess() {
@@ -59,33 +59,39 @@ export function Main(props) {
         <div className="intro" style={{ backgroundImage: "url(/images/background-print.png)" }} >
 
             <div className="introWrapper">
-                <div className="introL">
-                    <div className="introLBox">
-                        <h2 className="introSentence">Hey there, My name is </h2>
-                        <h1 className="introName">Mira Makadia</h1>
-                        <div className="titles">
-                            <div className="titlesBox">
-                                <div className="item">Software Developer</div>
-                                <div className="item">MERN Stack Developer</div>
-                                <div className="item">React Developer</div>
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
-                <div className="introR">
-                    <div className="introRBox">
-                        <div className="buttonsArea">
-                            <div className="topButtons">
-                                <Button className="button" style={{ height: "150px", width: "150px" }} onClick={() => handleShow('about')}>About</Button>
-                                <Button className="button" style={{ height: "150px", width: "150px" }} onClick={() => handleShow('experience')}>Experience</Button>
-                            </div>
-                            <div className="bottomButtons" >
-                                <Button className="button" style={{ height: "150px", width: "150px" }} onClick={() => handleShow('resume')}>Resume</Button>
-                                <Button className="button" style={{ height: "150px", width: "150px" }} onClick={() => handleShow('contact')}>Contact</Button>
-                            </div>
+                <div className="introLBox">
+                    <h2 className="introSentence">Hey there, My name is </h2>
+                    <h1 className="introName">Mira Makadia</h1>
+                    <div className="titles">
+                        <div className="titlesBox">
+                            <div className="item">Software Developer</div>
+                            <div className="item">MERN Stack Developer</div>
+                            <div className="item">React Developer</div>
                         </div>
                     </div>
+                    <div className="buttonsSmallScreenSize">
+                            <Button className="button"  onClick={() => handleShow('about')}>About</Button>
+                            <Button className="button"  onClick={() => handleShow('experience')}>Experience</Button>
+                            <Button className="button"  onClick={() => handleShow('resume')}>Resume</Button>
+                            <Button className="button"  onClick={() => handleShow('contact')}>Contact</Button>
+                       
+                    </div>
+
+                </div>
+
+                <div className="introRBox">
+                    <div className="buttonsArea">
+                        <div className="topButtons">
+                            <Button className="button" style={{ height: "150px", width: "150px" }} onClick={() => handleShow('about')}>About</Button>
+                            <Button className="button" style={{ height: "150px", width: "150px" }} onClick={() => handleShow('experience')}>Experience</Button>
+                        </div>
+                        <div className="bottomButtons" >
+                            <Button className="button" style={{ height: "150px", width: "150px" }} onClick={() => handleShow('resume')}>Resume</Button>
+                            <Button className="button" style={{ height: "150px", width: "150px" }} onClick={() => handleShow('contact')}>Contact</Button>
+                        </div>
+                    </div>
+
                 </div>
                 <Modal className="modalArea" show={show.about} onHide={handleClose}>
 

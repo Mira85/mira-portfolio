@@ -12,18 +12,19 @@
 
 .introWrapper{
     background-color: black;
-    height:60%;
-    width:50%;
+    height:70%;
+    width:60%;
     box-shadow:   #E0AAFF 0px 5px 15px;
     display:flex;
     border: solid #E0AAFF(150, 47, 47, 0.4);
 }
-
+/* 
  .introR{
     flex:1;
     display: flex;
     align-items: center;
     justify-content: center; 
+    background-color: red;
 }
 
 .introL{
@@ -31,23 +32,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
-} 
+    background-color: blue; 
+} */
  .introLBox{
-    padding:60px;
+    flex:1;
     display: flex;
+    align-items: center;
+    justify-content: center;
+   /* padding:60px; */
+    padding:20px; 
     flex-direction: column;
-    background-color: black;
+    background-color:black;
 } 
 
 .introRBox{
-    background-color: black;
+    flex:1;
     display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: black;
     justify-content: center;
     align-items: center;
-    height:30%;
-    width:70%;
+    padding:20px; 
+   /*  height:30%;
+    width:70%; */
 } 
+
+.buttonsSmallScreenSize{
+    display: none;
+}
 
 .introSentence{
     font-size: 35px;
@@ -64,12 +77,14 @@
     margin-top: 10px;
     height: 50px; 
     overflow: hidden;
+    border: solid red;
     
 }
 
 .titlesBox{
     height: 100%;
     animation: action 10s ease-in-out infinite alternate;
+    border: solid yellow;
 }
 @keyframes action {
     50%{
@@ -301,3 +316,60 @@
     border: none !important;
     color: white !important;
 }
+
+/* media queries */
+
+
+@media only screen and (max-width: 600px) {
+    
+    .intro{
+        overflow: hidden;
+    }
+    .introWrapper{
+        border: solid green;
+        width:75%;
+        height: 80%;
+        overflow: hidden;
+    }
+    .introLBox{
+        justify-content: space-evenly;
+    }
+    .introRBox{
+        display: none;
+    }
+    .item{
+        height:30px;
+        font-size: 18px;
+    }
+    .tiles{
+        height:25px;
+    }
+    .introSentence{
+        font-size: 25px;  
+    }
+    
+    .introName{
+        font-size: 40px; 
+    }
+    .buttonsSmallScreenSize{
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        gap:15px;
+        margin-top: 5px;
+        border: solid blue
+        
+    }
+    .button{
+        padding: 0;
+    }
+    .modal-dialog{
+        margin: auto;
+    }
+
+
+}
+
+
+  
+
