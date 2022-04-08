@@ -31,20 +31,6 @@ export function Main(props) {
             setShow({ ...show, contact: true });
         }
     }
-/* 
-    const form = useRef();
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        emailjs.sendForm('service_xsz4gbp', 'template_95fcx2y', form.current, 'lSR6CQp9OHmqtdgo8')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-        e.target.reset()
-    }; */
 
 
 
@@ -199,7 +185,7 @@ export function Main(props) {
                         <Modal.Title className="modalTitle">Contact Me</Modal.Title>
                     </Modal.Header>
                     <Modal.Body className="modalBody contactBody">
-                        <Form className="contactForm" name="contactForm" method="POST" data-netlify="true" onSubmit="submit">
+                        <Form className="contactForm" name="contactForm" method="post" data-netlify="true" onSubmit="submit">
                             <Form.Control className="formInput" type="hidden" name="form-name" value="contactForm" />
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label className="formLabel">Full Name</Form.Label>
