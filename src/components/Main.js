@@ -187,9 +187,7 @@ export function Main(props) {
                     <Modal.Body className="modalBody contactBody">
                         <Form className="contactForm" name="contact v1" method="post" onSubmit="submit">
                              <Form.Control className="formInput" type="hidden" name="form-name" value="contact v1" /> 
-                             <div>
-                                 <input name="bot-field" />
-                                 </div>
+                             
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label className="formLabel">Full Name</Form.Label>
                                 <Form.Control className="formInput" type="text" name="name" required />
