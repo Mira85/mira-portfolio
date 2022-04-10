@@ -1,5 +1,5 @@
 /*style for introduction page*/
-.intro{
+.intro {
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -7,17 +7,18 @@
     align-items: center;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat;
 }
 
-.introWrapper{
+.introWrapper {
     background-color: black;
-    height:70%;
-    width:60%;
-    box-shadow:   #E0AAFF 0px 5px 15px;
-    display:flex;
+    height: 70%;
+    width: 60%;
+    box-shadow: #E0AAFF 0px 5px 15px;
+    display: flex;
     border: solid #E0AAFF(150, 47, 47, 0.4);
 }
+
 /* 
  .introR{
     flex:1;
@@ -34,146 +35,150 @@
     justify-content: center;
     background-color: blue; 
 } */
- .introLBox{
-    flex:1;
+.introLBox {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-   /* padding:60px; */
-    padding:20px; 
+    /* padding:60px; */
+    padding: 20px;
     flex-direction: column;
-    background-color:black;
-} 
+    background-color: black;
+}
 
-.introRBox{
-    flex:1;
+.introRBox {
+    flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     background-color: black;
     justify-content: center;
     align-items: center;
-    padding:20px; 
-   /*  height:30%;
+    padding: 20px;
+    /*  height:30%;
     width:70%; */
-} 
+}
 
-.buttonsSmallScreenSize{
+.buttonsSmallScreenSize {
     display: none;
 }
 
-.introSentence{
+.introSentence {
     font-size: 35px;
     font-weight: 300;
-    color:  #E0AAFF;
+    color: #E0AAFF;
 }
 
-.introName{
+.introName {
     font-size: 60px;
-    color: #E0AAFF ; 
+    color: #E0AAFF;
 }
 
-.titles{
+.titles {
     margin-top: 10px;
-    height: 50px; 
+    height: 50px;
     overflow: hidden;
-    border: solid red;
-    
+
+
 }
 
-.titlesBox{
+.titlesBox {
     height: 100%;
     animation: action 10s ease-in-out infinite alternate;
-    border: solid yellow;
+
 }
+
 @keyframes action {
-    50%{
+    50% {
         transform: translateY(-50px)
     }
-    100%{
+
+    100% {
         transform: translateY(-100px)
     }
 }
 
-.item{
-    height:50px;
+.item {
+    height: 50px;
     font-size: 30px;
     font-weight: bold;
-    color:silver;
+    color: silver;
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 
-.introR{
+.introR {
     width: 100%;
     height: 100%;
-} 
+}
 
 .homeBckGround {
     background-size: cover;
     background-repeat: no-repeat;
-    height: 55rem ;
+    height: 55rem;
     width: 91.25rem;
     background-position: center;
     margin-top: 3rem;
-  
+
 }
 
 /* styling home page buttons */
-.buttonsArea{
+.buttonsArea {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    row-gap: 30px;  
+    row-gap: 30px;
 }
 
-.topButtons{
+.topButtons {
     display: flex;
     column-gap: 30px;
 }
 
-.bottomButtons{
+.bottomButtons {
     display: flex;
     column-gap: 30px;
 
 }
 
-.button{
+.button {
 
-        display: inline-block;
-        background: #9D4EDD !important;
-        border:none !important;
-        color: #fff;
-        text-transform: uppercase;
-        padding: 20px 30px;
-        border-radius: 5px;
-        box-shadow: 0px 17px 10px -10px  #9D4EDD ;
-        cursor: pointer;
-        -webkit-transition: all ease-in-out 300ms;
-        transition: all ease-in-out 300ms;
+    display: inline-block;
+    background: #9D4EDD !important;
+    border: none !important;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 17px 10px -10px #9D4EDD;
+    cursor: pointer;
+    -webkit-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
 }
+
 .button :hover {
-        box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
-        -webkit-transform: translate(0px, -10px) scale(1.2);
-                transform: translate(0px, -10px) scale(1.2);
+    box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translate(0px, -10px) scale(1.2);
+    transform: translate(0px, -10px) scale(1.2);
 }
 
 /* styles for modal*/
-.modalTitle{
+.modalTitle {
     color: #E0AAFF !important;
-    display:flex !important;
+    display: flex !important;
     justify-content: center !important;
     font-size: 30px;
 }
 
-.modal{
+.modal {
     height: 100vh;
     max-width: 100vw;
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important; 
-   
-}  
+    align-items: center !important;
+
+}
+
 /* .modalWrapper{
     border:solid blue;
     height:100% !important;
@@ -186,69 +191,89 @@
     justify-content: center !important;
     align-items:center !important ;
 } */
-.modal-dialog{
+.modal-dialog {
     max-width: none !important;
-    height: 70% !important; 
-    box-shadow:   #E0AAFF 0px 5px 15px;
-    width:70vw !important;
-    background-color: black; 
+    height: 70% !important;
+    box-shadow: #E0AAFF 0px 5px 15px;
+    width: 70vw !important;
+    background-color: black;
 }
 
-.modalHeader{
-    background-color:#121212;
+.modalHeader {
+    background-color: #121212;
     text-align: center;
     /* border: solid  #E0AAFF */
 }
 
-.modalBody{
+.modalBody {
     /* border:solid yellow; */
-    max-height:100% !important;  
-    background-color:  #121212;
+    max-height: 100% !important;
+    background-color: #121212;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: scroll;
 }
 
-.modal-content{
-    height:100% !important;
-    width:100% !important; 
+.modal-content {
+    height: 100% !important;
+    width: 100% !important;
 }
 
 /*styles for about*/
-.aboutWrapper{
-    display:flex;
+.aboutWrapper {
+    display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     height: 100%;
-    width:100%;
+    width: 100%;
 }
 
-.card{
+.card {
     background-color: #1b1f22 !important;
-    box-shadow:   #000 0px 5px 15px;
-    color:#abb8c3 ;
+    box-shadow: #000 0px 5px 15px;
+    color: #abb8c3;
 }
 
-.skills{
-    color:#E0AAFF ;
+.skillsDiv {
+    border: solid red;
+}
+
+.skills {
+    color: #E0AAFF;
     background-color: #1b1f22;
-    padding-right: 15px;
-    border: none; 
+    /*  padding-right: 15px;
+    border: none;  */
+    list-style: none;
+    margin: 0;
+    border: 0;
+
+
+
+}
+
+.skillItem {
+    display: block;
+    text-align: center;
+    float: left;
+    padding-right: 16px;
+    text-decoration: none;
+    margin: 0;
+    border: 0;
 }
 
 /* styles for experience */
-.projectArea{
+.projectArea {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 100% ;
+    height: 100%;
     row-gap: 6em;
     column-gap: 4rem;
     overflow: scroll;
 }
 
-.projectCard{
+.projectCard {
     height: 80% !important;
     overflow: scroll;
     margin: auto;
@@ -256,63 +281,63 @@
 
 .projectBtns {
     border: solid #E0AAFF !important;
-    background-color: #1b1f22 !important; 
+    background-color: #1b1f22 !important;
 }
 
-.projectAnchor{
+.projectAnchor {
     text-decoration: none;
-    color:#E0AAFF !important; 
+    color: #E0AAFF !important;
 }
 
-.projectBtnWrapper{
-    display:flex;
+.projectBtnWrapper {
+    display: flex;
     justify-content: space-evenly;
     margin-top: 1rem;
 }
 
 /* styles for resume*/
-.resume{
-    height: 95%; 
+.resume {
+    height: 95%;
 }
 
 /* styles for contact*/
-.contactBody{
-    display:flex;
-    flex-direction: column; 
+.contactBody {
+    display: flex;
+    flex-direction: column;
 }
 
-.contactForm{
-    height:60%;
-    width:50%;
+.contactForm {
+    height: 60%;
+    width: 50%;
     overflow: scroll;
 }
 
-.contactBtns{
-    width:20%;
+.contactBtns {
+    width: 20%;
     display: flex;
     justify-content: space-evenly;
     margin-top: 5%;
 }
 
-.formLabel{
-    color:#E0AAFF
+.formLabel {
+    color: #E0AAFF
 }
 
-.submitBtnWrapper{
+.submitBtnWrapper {
     display: flex;
     justify-content: center !important;
     width: 100%;
 }
 
-.submitBtnForm{
-    color:#E0AAFF !important; 
+.submitBtnForm {
+    color: #E0AAFF !important;
     border: solid #E0AAFF !important;
     background-color: #1b1f22 !important;
     width: 30%
 }
 
-.formInput{
-    background-color: 	#383838 !important;
+.formInput {
+    background-color: #383838 !important;
     border: none !important;
     color: white !important;
 }
@@ -321,55 +346,88 @@
 
 
 @media only screen and (max-width: 600px) {
-    
-    .intro{
+
+    .intro {
         overflow: hidden;
     }
-    .introWrapper{
-        border: solid green;
-        width:75%;
+
+    .introWrapper {
+        width: 75%;
         height: 80%;
         overflow: hidden;
     }
-    .introLBox{
+
+    .introLBox {
         justify-content: space-evenly;
     }
-    .introRBox{
+
+    .introRBox {
         display: none;
     }
-    .item{
-        height:30px;
+
+    .item {
+        height: 30px;
         font-size: 18px;
     }
-    .tiles{
-        height:25px;
+
+    .tiles {
+        height: 25px;
     }
-    .introSentence{
-        font-size: 25px;  
+
+    .introSentence {
+        font-size: 25px;
     }
-    
-    .introName{
-        font-size: 40px; 
+
+    .introName {
+        font-size: 40px;
     }
-    .buttonsSmallScreenSize{
+
+    .buttonsSmallScreenSize {
         display: flex;
         padding: 0;
         flex-direction: column;
-        gap:15px;
+        gap: 15px;
         margin-top: 5px;
         border: solid blue
-        
     }
-    .button{
+
+    .button {
         padding: 0;
     }
-    .modal-dialog{
+
+    .modal-dialog {
+        margin: auto;
+        height: 85% ! important;
+        width: 75vw ! important;
+    }
+
+    .card {
         margin: auto;
     }
 
+    .projectCard {
+        height: 50% !important;
+
+    }
+
+    .resume {
+        height: 95%;
+        width: 80%;
+        margin: auto !important;
+    }
+
+    .contactForm {
+        height: 80%;
+        width: 80%;
+        margin: auto;
+    }
+
+    .submitBtnForm {
+        width: 50%;
+    }
+
+    .contactBtns {
+        width: 40%;
+    }
 
 }
-
-
-  
-

@@ -57,11 +57,11 @@ export function Main(props) {
                         </div>
                     </div>
                     <div className="buttonsSmallScreenSize">
-                            <Button className="button"  onClick={() => handleShow('about')}>About</Button>
-                            <Button className="button"  onClick={() => handleShow('experience')}>Experience</Button>
-                            <Button className="button"  onClick={() => handleShow('resume')}>Resume</Button>
-                            <Button className="button"  onClick={() => handleShow('contact')}>Contact</Button>
-                       
+                        <Button className="button" onClick={() => handleShow('about')}>About</Button>
+                        <Button className="button" onClick={() => handleShow('experience')}>Experience</Button>
+                        <Button className="button" onClick={() => handleShow('resume')}>Resume</Button>
+                        <Button className="button" onClick={() => handleShow('contact')}>Contact</Button>
+
                     </div>
 
                 </div>
@@ -98,27 +98,28 @@ export function Main(props) {
                                         <Card.Body>
                                             <Card.Title className="cardTitle"></Card.Title>
                                             <Card.Text>
-                                                <p>Hi, my name is Mira. I am a full stack software engineer with a background in the Pharmaceutical Industry. I recently graduated from the Software Engineering Immersive Flex program at General Assembly, where I developed skills in Javascript, React, Python, Django and many other technical skills. Over the course of 6 months, i built four projects. Details about them can be found in the experience section. </p>
-                                                <p>My previous experience in the Pharmaceutical Industry as a senior formulation scientist has taught me to analyze and solve complex problems and bring value to the teams I work with. I am looking forward to my journey in tech industry where i can solve problems creatively using my inquisitive nature.</p>
-                                                <hr />
-                                                <h5>My skills:</h5>
-                                                <div className="skills">
-                                                    <button className="skills">HTML5</button>
-                                                    <button className="skills">CSS</button>
-                                                    <button className="skills">JavaScript</button>
-                                                    <button className="skills">JQuery</button>
-                                                    <button className="skills">Python</button>
-                                                    <button className="skills">Django</button>
-                                                    <button className="skills">React</button>
-                                                    <button className="skills">Node.js</button>
-                                                    <button className="skills">Express</button>
-                                                    <button className="skills">Mongodb</button>
-                                                    <button className="skills">PostgreSQL</button>
-                                                    <button className="skills">Bootstrap</button>
-                                                    <button className="skills">Materialize</button>
-                                                    <button className="skills">Netlify</button>
-                                                    <button className="skills">Heroku</button>
-                                                </div>
+                                               
+                                                    <p>Hi, my name is Mira. I am a full stack software engineer with a background in the Pharmaceutical Industry. I recently graduated from the Software Engineering Immersive Flex program at General Assembly, where I developed skills in Javascript, React, Python, Django and many other technical skills. Over the course of 6 months, i built four projects. Details about them can be found in the experience section. </p>
+                                                    <p>My previous experience in the Pharmaceutical Industry as a senior formulation scientist has taught me to analyze and solve complex problems and bring value to the teams I work with. I am looking forward to my journey in tech industry where i can solve problems creatively using my inquisitive nature.</p>
+                                                    <hr />
+                                                    <h5>My skills:</h5>
+                                                    <ul className="skills">
+                                                        <li className="skillItem">HTML5</li>
+                                                        <li className="skillItem">CSS</li>
+                                                        <li className="skillItem">JavaScript</li>
+                                                        <li className="skillItem">JQuery</li>
+                                                        <li className="skillItem">Python</li>
+                                                        <li className="skillItem">Django</li>
+                                                        <li className="skillItem">React</li>
+                                                        <li className="skillItem">Node.js</li>
+                                                        <li className="skillItem">Express</li>
+                                                        <li className="skillItem">Mongodb</li>
+                                                        <li className="skillItem">PostgreSQL</li>
+                                                        <li className="skillItem">Bootstrap</li>
+                                                        <li className="skillItem">Materialize</li>
+                                                        <li className="skillItem">Netlify</li>
+                                                        <li className="skillItem">Heroku</li>
+                                                    </ul>
                                             </Card.Text>
                                         </Card.Body>
                                     </Col>
@@ -186,8 +187,8 @@ export function Main(props) {
                     </Modal.Header>
                     <Modal.Body className="modalBody contactBody">
                         <Form className="contactForm" name="contact v1" method="post" onSubmit="submit">
-                             <Form.Control className="formInput" type="hidden" name="form-name" value="contact v1" /> 
-                             
+                            <Form.Control className="formInput" type="hidden" name="form-name" value="contact v1" />
+
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label className="formLabel">Full Name</Form.Label>
                                 <Form.Control className="formInput" type="text" name="name" required />
@@ -205,12 +206,12 @@ export function Main(props) {
                                 <Form.Control className="formInput" as="textarea" rows={5} name="message" />
                             </Form.Group>
                             <div className="submitBtnWrapper">
-                            <Button className="submitBtnForm" variant="primary" type="submit">
-                                Send Message
-                            </Button>
-                        </div>
+                                <Button className="submitBtnForm" variant="primary" type="submit">
+                                    Send Message
+                                </Button>
+                            </div>
                         </Form>
-                        
+
                         <div className="contactBtns">
                             <a href="https://github.com/Mira85" target="_blank" rel="noreferrer nofollow"><i className="bi bi-github" style={{ fontSize: '25px', color: '#E0AAFF' }}> </i></a>
                             <a href="https://www.linkedin.com/in/mira-makadia/" target="_blank" rel="noreferrer nofollow">  <i className="bi bi-linkedin" style={{ fontSize: '25px', color: '#E0AAFF' }}></i></a>
