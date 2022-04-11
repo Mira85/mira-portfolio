@@ -52,8 +52,8 @@ export function Main(props) {
                     <div className="titles">
                         <div className="titlesBox">
                             <div className="item">Software Developer</div>
-                            <div className="item">MERN Stack Developer</div>
-                            <div className="item">React Developer</div>
+                            <div className="item hideItem">MERN Stack Developer</div>
+                            <div className="item hideitem">React Developer</div>
                         </div>
                     </div>
                     <div className="buttonsSmallScreenSize">
@@ -89,7 +89,7 @@ export function Main(props) {
                             <Card className="card" style={{ maxWidth: "90rem", maxHeight: "90rem" }}>
                                 <Row className='no-gutters'>
                                     <Col md={5} lg={5}>
-                                        <Card.Img variant="top" src="https://imgur.com/bpixhe9.png" style={{
+                                        <Card.Img className="myPic" variant="top" src="https://imgur.com/bpixhe9.png" style={{
                                             height: "100%",
                                             width: "100%",
                                         }} className="image" />
@@ -98,7 +98,7 @@ export function Main(props) {
                                         <Card.Body>
                                             <Card.Title className="cardTitle"></Card.Title>
                                             <Card.Text>
-                                               
+                                                <div>
                                                     <p>Hi, my name is Mira. I am a full stack software engineer with a background in the Pharmaceutical Industry. I recently graduated from the Software Engineering Immersive Flex program at General Assembly, where I developed skills in Javascript, React, Python, Django and many other technical skills. Over the course of 6 months, i built four projects. Details about them can be found in the experience section. </p>
                                                     <p>My previous experience in the Pharmaceutical Industry as a senior formulation scientist has taught me to analyze and solve complex problems and bring value to the teams I work with. I am looking forward to my journey in tech industry where i can solve problems creatively using my inquisitive nature.</p>
                                                     <hr />
@@ -120,6 +120,7 @@ export function Main(props) {
                                                         <li className="skillItem">Netlify</li>
                                                         <li className="skillItem">Heroku</li>
                                                     </ul>
+                                                </div>
                                             </Card.Text>
                                         </Card.Body>
                                     </Col>

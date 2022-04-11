@@ -179,18 +179,6 @@
 
 }
 
-/* .modalWrapper{
-    border:solid blue;
-    height:100% !important;
-    background-color: blue;
-} */
-
-/* .modalArea{
-    border:solid pink !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items:center !important ;
-} */
 .modal-dialog {
     max-width: none !important;
     height: 70% !important;
@@ -341,6 +329,47 @@
 /* media queries */
 
 
+@media (min-width: 610px) and (max-width: 1000px) {
+    .intro {
+        overflow: hidden;
+    }
+
+    .introWrapper {
+        width: 80%;
+        height: 85%;
+        overflow: hidden;
+    }
+
+    .hideItem {
+        visibility: hidden;
+    }
+
+    .button {
+        height: 6.5rem !important;
+        width: 6.5rem ! important;
+        font-size: 13px !important;
+    }
+
+    .modal-dialog {
+        margin: auto;
+        height: 86% ! important;
+        width: 80vw ! important;
+    }
+
+    .card {
+        margin: auto;
+    }
+
+    .titlesBox {
+        animation: none !important;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+    }
+}
+
+
 @media only screen and (max-width: 600px) {
 
     .intro {
@@ -354,11 +383,15 @@
     }
 
     .introLBox {
-        justify-content: space-evenly;
+        justify-content: center;
     }
 
     .introRBox {
         display: none;
+    }
+
+    .hideItem {
+        visibility: hidden;
     }
 
     .item {
@@ -378,13 +411,17 @@
         font-size: 40px;
     }
 
+    .titlesBox {
+        animation: none !important;
+    }
+
     .buttonsSmallScreenSize {
         display: flex;
         padding: 0;
         flex-direction: column;
         gap: 15px;
-        margin-top: 5px;
-       
+        margin-top: 10%;
+
     }
 
     .button {
@@ -425,30 +462,5 @@
     .contactBtns {
         width: 40%;
     }
-
-}
-
-@media only screen and (max-width: 900px) {
-    .intro {
-        overflow: hidden;
-    }
-
-    .introWrapper {
-        width: 80%;
-        height: 85%;
-        overflow: hidden;
-    }
-    .button {
-
-       border: solid red;
-        padding: 5px 10px;
-        border-radius: 5px;
-        box-shadow: 0px 17px 10px -10px #9D4EDD;
-        cursor: pointer;
-        -webkit-transition: all ease-in-out 300ms;
-        transition: all ease-in-out 300ms;
-    }
-
-  
 
 }
