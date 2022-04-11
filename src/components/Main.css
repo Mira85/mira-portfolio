@@ -235,10 +235,6 @@
     color: #abb8c3;
 }
 
-.skillsDiv {
-    border: solid red;
-}
-
 .skills {
     color: #E0AAFF;
     background-color: #1b1f22;
@@ -388,7 +384,7 @@
         flex-direction: column;
         gap: 15px;
         margin-top: 5px;
-        border: solid blue
+       
     }
 
     .button {
@@ -429,5 +425,30 @@
     .contactBtns {
         width: 40%;
     }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .intro {
+        overflow: hidden;
+    }
+
+    .introWrapper {
+        width: 80%;
+        height: 85%;
+        overflow: hidden;
+    }
+    .button {
+
+       border: solid red;
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-shadow: 0px 17px 10px -10px #9D4EDD;
+        cursor: pointer;
+        -webkit-transition: all ease-in-out 300ms;
+        transition: all ease-in-out 300ms;
+    }
+
+  
 
 }
