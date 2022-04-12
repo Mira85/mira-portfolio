@@ -92,7 +92,7 @@ export function Main(props) {
                                         <Card.Img className="myPic" variant="top" src="https://imgur.com/bpixhe9.png" style={{
                                             height: "100%",
                                             width: "100%",
-                                        }} className="image" />
+                                        }} />
                                     </Col>
                                     <Col>
                                         <Card.Body>
