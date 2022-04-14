@@ -89,10 +89,10 @@ export function Main(props) {
                             <Card className="card" style={{ maxWidth: "90rem", maxHeight: "90rem" }}>
                                 <Row className='no-gutters'>
                                     <Col md={5} lg={5}>
-                                        <Card.Img className="myPic" variant="top" src="https://imgur.com/bpixhe9.png" style={{
+                                        <Card.Img className="myPic" variant="top" src="https://imgur.com/bpixhe9.png" /*style={{
                                             height: "100%",
                                             width: "100%",
-                                        }} />
+                                        }} *//>
                                     </Col>
                                     <Col>
                                         <Card.Body>
@@ -138,31 +138,34 @@ export function Main(props) {
                         <div className="projectArea">
                             {projectsArr.map((object, arrayIdx) => {
                                 return (
-                                    <Card className="projectCard" key={arrayIdx} style={{ width: "25rem" }} >
-                                        <Card.Img variant="top" src={object.image} style={{
+                                    <Card className="projectCard" key={arrayIdx} style={{ maxWidth: "21rem"}} >
+                                       
+                                                <Card.Img variant="top" src={object.image} /*style={{
                                             height: "15.5rem",
                                             width: "25rem",
-                                        }} className="image" />
-                                        <Card.Body>
-                                            <Card.Title className="cardTitle" style={{ color: '#E0AAFF', textAlign: 'center', fontSize: '24px' }}>{object.name}
-                                            </Card.Title>
-                                            <Card.Text>
-                                                <div><b><span style={{ fontSize: '18px' }}>Description:</span></b> {object.description}</div>
-                                                <div><b><span style={{ fontSize: '18px' }}>Technologies: </span></b>
+                                        }} */className="image" />
+                                           
+                                                <Card.Body>
+                                                    <Card.Title className="cardTitle" style={{ color: '#E0AAFF', textAlign: 'center', fontSize: '24px' }}>{object.name}
+                                                    </Card.Title>
+                                                    <Card.Text>
+                                                        <div className="projectCardText"><b><span style={{ fontSize: '16px' }}>Description:</span></b> {object.description}</div>
+                                                        <div className="projectCardText"><b><span style={{ fontSize: '16px' }}>Technologies: </span></b>
 
-                                                    {object.technologies.join(', ')}
-                                                </div>
-                                                <div className="projectBtnWrapper">
-                                                    <Button className="projectBtns" variant="secondary">
-                                                        <a className="projectAnchor" href={object.github} target="_blank" rel="noreferrer nofollow">Check Code</a>
+                                                            {object.technologies.join(', ')}
+                                                        </div>
+                                                        <div className="projectBtnWrapper">
+                                                            <Button className="projectBtns" variant="secondary">
+                                                                <a className="projectAnchor" href={object.github} target="_blank" rel="noreferrer nofollow">Check Code</a>
 
-                                                    </Button>
-                                                    <Button className="projectBtns" variant="secondary">
-                                                        <a className="projectAnchor" href={object.viewProject} target="_blank" rel="noreferrer nofollow">View Project</a>
-                                                    </Button>
-                                                </div>
-                                            </Card.Text>
-                                        </Card.Body>
+                                                            </Button>
+                                                            <Button className="projectBtns" variant="secondary">
+                                                                <a className="projectAnchor" href={object.viewProject} target="_blank" rel="noreferrer nofollow">View Project</a>
+                                                            </Button>
+                                                        </div>
+                                                    </Card.Text>
+                                                </Card.Body>
+                                           
                                     </Card>
                                 )
                             })};
@@ -225,3 +228,28 @@ export function Main(props) {
 }
 
 export default Main;
+
+
+
+
+
+<Card className="card" style={{ maxWidth: "90rem", maxHeight: "90rem" }}>
+    <Row className='no-gutters'>
+        <Col md={5} lg={5}>
+            <Card.Img className="myPic" variant="top" src="https://imgur.com/bpixhe9.png" />
+        </Col>
+        <Col>
+            <Card.Body>
+                <Card.Title className="cardTitle"></Card.Title>
+                <Card.Text>
+                    <div>
+                        <p>Hi, my name is Mira. I am a full stack software engineer with a background in the Pharmaceutical Industry. I recently graduated from the Software Engineering Immersive Flex program at General Assembly, where I developed skills in Javascript, React, Python, Django and many other technical skills. Over the course of 6 months, i built four projects. Details about them can be found in the experience section. </p>
+                        <p>My previous experience in the Pharmaceutical Industry as a senior formulation scientist has taught me to analyze and solve complex problems and bring value to the teams I work with. I am looking forward to my journey in tech industry where i can solve problems creatively using my inquisitive nature.</p>
+                        <hr />
+                        <h5>My skills:</h5>
+                    </div>
+                </Card.Text>
+            </Card.Body>
+        </Col>
+    </Row>
+</Card>

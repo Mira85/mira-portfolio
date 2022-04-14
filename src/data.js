@@ -12,7 +12,7 @@ const projectsArr =  [
         image:'images/selldecor-portfolio.png',
         name: "SellDecor",
         technologies:['React', 'HTML', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'CSS'],
-        description:"Designed a MERN stack application for users who want to buy or sell used/unused decor items. This application has a backend deployed on Heroku  and data stored in MongoDB. Frontend is developed with REACT and deployed on Netlify. This application utilizes Google Firebase for authentication and  authorization.",
+        description:"Designed a MERN stack application for users who want to buy or sell used/unused decor items. This application stores data in MongoDB and frontend is developed with REACT. This application utilizes Google Firebase for authentication and authorization.",
         github:"https://github.com/Mira85/selldecor-frontend",
         viewProject:"https://selldecor.netlify.app/"
     },
