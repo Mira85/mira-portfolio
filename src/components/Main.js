@@ -143,7 +143,7 @@ export function Main(props) {
                                         <Card.Img className="projectImg" variant="top" src={object.image} style={{
                                             height: "10rem",
                                             width: "12rem",
-                                        }} className="image" />
+                                        }} />
 
                                         <Card.Body className="smallScrnCardBody">
                                             <div className="projectTitle">{object.name}</div>
@@ -168,7 +168,7 @@ export function Main(props) {
                                         <Card.Img className="projectImg" variant="top" src={object.image} /*style={{
                                             height: "15.5rem",
                                             width: "25rem",
-                                        }} */className="image" />
+                                        }} */ />
 
                                         <Card.Body>
                                             <Card.Title className="cardTitle" style={{ color: '#E0AAFF', textAlign: 'center', fontSize: '24px' }}>{object.name}
