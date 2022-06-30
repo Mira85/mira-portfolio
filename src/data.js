@@ -22,7 +22,7 @@ const projectsArr =  [
         technologies: ['Django', 'Python', 'PostgreSQL','CSS', 'Bootsrap'],
         description:"Developed a full CRUD web application made using Django framework, Python language. It allows users to view attractions based in New York City and filter down by borough and neighborhood. Users can leave reviews on attractions and create itineraries to plan their travels.",
         github:"https://github.com/Mira85/project_4",
-        viewProject:"https://destination-nyc.herokuapp.com/"
+        viewProject:"https://destination-nyc-mira.herokuapp.com/"
     }
     
 ]
